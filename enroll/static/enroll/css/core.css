@@ -1,0 +1,28 @@
+/* font- family*/
+
+.st-font {
+  font-family: "Satisfy";
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container-fluid {
+  min-height: 100%;
+}
+
+/*service icon*/
+.i-color {
+  color: chartreuse;
+}
+/* services subtitle color*/
+
+.ss-color {
+  color: whitesmoke;
+}
+
+.name-home {
+  font-size: 20px;
+}

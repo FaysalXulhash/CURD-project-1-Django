@@ -1,0 +1,32 @@
+{% extends "enroll/base.html" %}
+{% block content %}
+<h2 class="mt-2 mx-auto col-4 alert alert-primary">Student Record List</h2>
+<div class = "container mt-5">
+      <table class="table ">
+        <thead>
+          <tr>
+            <th scope="col">Serial No</th>
+            <th scope="col">Student Name</th>
+            <th scope="col">Email Address</th>
+            <th scope="col">Password</th>
+            <th scope="col">Action</th>    
+          </tr>
+        </thead>
+        <tbody>
+          {% for f in form %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ f.name }}</td>
+            <td>{{ f.email }}</td>
+            <td>{{ f.password }}</td>
+            <td> 
+            <a href = "{% url 'delete-student' f.id %}" class="btn btn-danger btn-sm">Delete </a>
+            <a href = "{% url 'update-student' f.id %}" class="btn btn-warning btn-sm">Update </a>
+          </td> 
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    
+{% endblock content %}

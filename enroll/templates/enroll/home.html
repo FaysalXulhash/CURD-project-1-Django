@@ -1,0 +1,10 @@
+{% extends "enroll/base.html" %}
+{% block content %}
+<h2 class="mt-2 mx-auto col-4 alert alert-primary">Student Register Form</h2>
+ <hr>
+<form action="" class="col-6 mx-auto card p-3 shadow-lg" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success" value="Add Student">
+</form>
+{% endblock content %}
